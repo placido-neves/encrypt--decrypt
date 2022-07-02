@@ -12,5 +12,5 @@ model.sequelize.sync().then(()=>{
 })
 
 app.listen(8000, ()=>{
-    console.log("Server starting http:localhost:3333")
+    console.log("Server starting http:localhost:8000")
 })

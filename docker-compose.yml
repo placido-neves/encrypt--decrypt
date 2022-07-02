@@ -13,17 +13,14 @@ services:
       - postgres_data:/var/lib/postgresql/data/
 
   criptografia:
-    build: .
-    command: npm start
+    container_name: criptografia
+    build: ./criptografia
     volumes:
       - ./criptografia:/app
     ports:
       - "8000:8000"
-    environment:
-      - NODE_ENV=development
     depends_on:
       - db
-
 
 volumes:
   postgres_data: null

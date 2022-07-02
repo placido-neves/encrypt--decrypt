@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const crypt = require('./crypto/crypto')
+const crypt = require('./service')
 
 router.get('/dencrypted/:id',crypt.decrypt)
 
