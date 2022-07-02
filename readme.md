@@ -1,13 +1,38 @@
-É uma app de criptografia que salva os dados no bancos:
+# Teste de encriptar e desencriptar
 
-    Em um get com url '/dencrypted/:id' => id no caso primary key do banco de bados pega os dados desecrpitado.
+<p style="font-size: 15px">Execute o comando a seguir no terminal </p>
 
-    E em post com url '/encrypted' salva o text no banco de dados encriptado
+* docker-compose up --build 
+    * Se for a primeira vez se você executa, pra instalar as depedencias
+    
+* docker-compose up 
+    * Se for executar e ter dados no terminal
+    * e encerrar a execução com crtl+c
+    
+* docker-compose up -d
+    * Se for executar e ter nada no twerminal
+    * e encerrar a docker-compose down
 
-Stacks:
+## Rotas
+    
+> Post: "/encrypted" 
 
-    Postgres;
-    Docker;
-    Nodejs;
-    Express;
-    Sequelize;
+```
+{
+    "text":"exemple text"
+}
+
+```
+### Dentro tem ter um text para que a rota reconheça qual vai ser o texto que vai ser encriptado
+
+> Get: '/dencrypted/:id'
+
+### No lugar do id tem colocar um id existente do banco de dados
+
+## Stacks:
+
+*    Docker;
+ *   Nodejs;
+*    Express;
+*    Sequelize;
+ *   Postgres;
